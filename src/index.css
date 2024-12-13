@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html.lang-en {
+  font-family: "Work Sans", sans-serif;
+  direction: ltr;
+}
+
+html.lang-ar {
+  font-family: "Cairo", sans-serif;
+  direction: rtl;
+}
+progress::-webkit-progress-bar {
+  background-color: #e5e7eb; /* Gray-200 */
+  border-radius: 0.5rem; /* Match rounded-lg */
+}
+
+progress::-webkit-progress-value {
+  background-color: #ef4444; /* Red-500 */
+  border-radius: 0.5rem; /* Match rounded-lg */
+}
+
+progress::-moz-progress-bar {
+  background-color: #ef4444; /* Red-500 */
+  border-radius: 0.5rem; /* Match rounded-lg */
+}
+
+:root {
+  font-size: 16px;
+}
+@media (max-width: 854px) {
+  :root {
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  :root {
+    font-size: 10px;
+  }
+}
