@@ -293,7 +293,7 @@ export const LandingRoute = () => {
             </h3>
             <p className="text-2xl font-normal">
               {consultationInfo.description[language]}
-              <span className="underline"></span>
+              <span className={`underline`} dir="ltr">+20 1003 154358</span>
             </p>
           </div>
           <Button intent={"outline"}>
