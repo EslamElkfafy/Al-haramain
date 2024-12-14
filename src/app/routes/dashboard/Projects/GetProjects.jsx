@@ -48,7 +48,7 @@ export const GetDashboardProjectsRoute = () => {
         )}
         <p className="font-normal text-base">{category.ar}</p>
         <h3 className="font-normal text-base">ملخص</h3>
-        <p className="font-normal text-sm">{description.ar}</p>
+        <p className="font-normal text-sm h-12 overflow-hidden">{description.ar}</p>
       </div>
     );
   };

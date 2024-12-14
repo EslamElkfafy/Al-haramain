@@ -4,7 +4,6 @@ import { dataOfHeroes } from "@/constants/landingConstants";
 import { useLanguage } from "@/context/LanguageContext";
 import { ImageSlider } from "@/components/ui/imageSlider";
 import axiosInstance from "@/axiosInstance";
-import TestImg from "@/assets/qmpps4l0yfyrlzq44tie.jpg"
 
 export const HeroLanding = () => {
   // const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
@@ -35,7 +34,7 @@ export const HeroLanding = () => {
         <ImageSlider images={dataImgs} />
       ) : (
         <header
-          style={{ backgroundImage: `url(${TestImg})` }}
+          style={{ backgroundImage: `url(${dataOfHeroes[0].urlImg})` }}
           className={`relative bg-no-repeat bg-cover bg-center flex items-center h-[42.3125rem]  w-max-854:p-5`}
         >
           <h1

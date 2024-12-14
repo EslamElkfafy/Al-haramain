@@ -31,7 +31,7 @@ export const ServicesRoute = () => {
       <div className="flex flex-1 p-12 flex-col justify-between bg-[#E53634] text-white w-max-854:p-6">
         <div>
           <h2 className="text-4xl font-bold">{name[language]}</h2>
-          <p className="text-base font-normal">{description[language]}</p>
+          <p className="text-base font-normal h-32 overflow-hidden">{description[language]}</p>
         </div>
 
         <Button
