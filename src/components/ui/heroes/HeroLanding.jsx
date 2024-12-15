@@ -39,13 +39,12 @@ export const HeroLanding = () => {
         >
           <h1
             className={`${checkLanguage(
-              "ml-[7rem]",
-              "mr-[7rem]"
+              "animate-moveTextFromLeftToRightMargin",
+              "animate-moveTextFromRightToLeftMargin"
             )} text-7xl font-semibold w-[34.75rem] w-max-854:m-0 w-max-400:text-center`}
           >
             {dataOfHeroes[0].title[language]}
           </h1>
-          //{" "}
           {/* <div className={`absolute ${checkLanguage("right-0", "left-0")} bottom-0 w-[26rem] h-[11.875rem] flex flex-col`}>
     //         <div className='p-3 flex flex-col gap-5 bg-[#E53634] flex-grow text-center text-[#fff]'>
     //             <p className='text-xl font-bold'>{checkLanguage("Description", "وصف")}</p>

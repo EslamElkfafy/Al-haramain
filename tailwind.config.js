@@ -12,10 +12,20 @@ export default {
           '0%': { right: '-1000px', opacity: '0' },
           '100%': { right: '4rem', opacity: '1' },
         },
+        moveBetweenFromLeftToRightMargin: {
+          '0%': { marginLeft: '-1000px', opacity: '0' },
+          '100%': { marginLeft: '4rem', opacity: '1' },
+        },
+        moveBetweenFromRightToLeftMargin: {
+          '0%': { marginRight: '-1000px', opacity: '0' },
+          '100%': { marginRight: '4rem', opacity: '1' },
+        },
       },
       animation: {
         moveTextFromLeftToRight: 'moveBetweenFromLeftToRight 2s ease-in-out forwards',
         moveTextFromRightToLeft: 'moveBetweenFromRightToLeft 2s ease-in-out forwards',
+        moveTextFromLeftToRightMargin: 'moveBetweenFromLeftToRightMargin 2s ease-in-out forwards',
+        moveTextFromRightToLeftMargin: 'moveBetweenFromRightToLeftMargin 2s ease-in-out forwards',
       },
       screens: {
         "w-max-1290": { max: "1290px" },
