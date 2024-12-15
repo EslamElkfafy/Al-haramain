@@ -35,8 +35,8 @@ export const ImageSlider = ({ images }) => {
       /> */}
       <h1
         className={`absolute  ${checkLanguage(
-          "left-16",
-          "right-16"
+          "animate-moveTextFromLeftToRight",
+          "animate-moveTextFromRightToLeft"
         )} top-1/2 -translate-y-1/2 text-6xl font-semibold break-words w-max-854:text-center`}
       >
         {images[currentIndex].title[language]}

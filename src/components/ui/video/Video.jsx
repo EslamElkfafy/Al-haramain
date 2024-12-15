@@ -47,7 +47,7 @@ export const VideoPlayer = ({videoUrl}) => {
         onProgress={handleProgress}
         onDuration={handleDuration}
         width="100%"
-        height="auto"
+        height="36.875rem"
       />
       <div className="absolute bottom-0 left-0 w-full flex items-center justify-between px-4 py-2 bg-black bg-opacity-50 rounded-b-lg">
         {/* Play/Pause Button */}

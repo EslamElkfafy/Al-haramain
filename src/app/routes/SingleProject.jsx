@@ -158,7 +158,7 @@ export const SingleProjectRoute = () => {
     <>
       <Hero
         urlImg={data?.images[0].url}
-        textHeader={checkLanguage("Single Project", "مشروع فردية")}
+        textHeader={checkLanguage("Single Project", "مشروع فردي")}
         textDescription={checkLanguage(
           "Home/ Project / Single Project",
           "الصفحة الرئيسية/ المشروع / مشروع فردي"

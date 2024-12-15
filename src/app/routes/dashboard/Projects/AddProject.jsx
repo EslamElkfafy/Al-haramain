@@ -28,7 +28,6 @@ export const AddDashboardProjectRoute = () => {
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState(null);
   const [successMessage, setSuccessMessage] = useState(null);
-  let controller;
   const imagesData = mediaData
     .filter((item) => item.type === "image")
     .map((item) => item.data);
@@ -54,8 +53,6 @@ export const AddDashboardProjectRoute = () => {
       setErrors(["All fields are required."]);
       return;
     }
-    if (controller) controller.abort(); // Cancel the previous request
-    controller = new AbortController();
     setLoading(true);
     setErrors(null);
     setSuccessMessage(null);
@@ -68,8 +65,7 @@ export const AddDashboardProjectRoute = () => {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
-          },
-          signal: controller.signal
+          }
         }
       );
       setSuccessMessage("Form submitted successfully!");

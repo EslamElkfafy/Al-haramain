@@ -172,7 +172,7 @@ export const LandingRoute = () => {
     const router = useNavigate();
     return (
       <div
-        className="h-[20.6875rem]"
+        className="h-[20.6875rem] cursor-pointer"
         onClick={() =>
           router(`project/${_id}`, {
             state: { listOfProjects: listOfDate, myIndexInList },

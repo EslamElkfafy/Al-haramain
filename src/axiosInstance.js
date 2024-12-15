@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const axiosInstance = axios.create({
   baseURL: 'http://localhost:5000/api/v1',
-  // baseURL: "https://steel-code.vercel.app/api/v1",
+  // baseURL: "https://steel-backend-liard.vercel.app/api/v1",
 });
 
 export default axiosInstance;

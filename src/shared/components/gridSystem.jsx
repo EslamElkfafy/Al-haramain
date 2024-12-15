@@ -23,17 +23,11 @@ export const GridSystem = ({
   const [loading, setLoading] = useState(false);
   const { language, checkLanguage } = useLanguage();
   const [AllListOfData, setAllListOfData] = useState([]);
-  let controller;
   const fetchData = useCallback(async () => {
-    if (controller) controller.abort(); // Cancel the previous request
-    controller = new AbortController();
     setLoading(true);
     try {
       const response = await axiosInstance.get(
-        `${endPoint}?page=${currentPage}&limit=${limit}`, 
-        {
-          signal: controller.signal,
-        }
+        `${endPoint}?page=${currentPage}&limit=${limit}`
       );
       setTotalPages(response.data.pagination.numberOfPages);
       setData(response.data);
