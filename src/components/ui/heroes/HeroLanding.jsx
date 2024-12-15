@@ -8,7 +8,7 @@ import axiosInstance from "@/axiosInstance";
 export const HeroLanding = () => {
   // const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
   // const currentImg = dataOfHeroes[currentHeroIndex];
-  const { language, checkLanguage } = useLanguage()
+  const { language, checkLanguage } = useLanguage();
   // const handlePrevHero = () => {
   //   setCurrentHeroIndex(prev => (prev > 0 ? prev - 1 : prev));
   // };
@@ -18,19 +18,25 @@ export const HeroLanding = () => {
   // const isPrevDisabled = currentHeroIndex === 0;
   // const isNextDisabled = currentHeroIndex === dataOfHeroes.length - 1;
   const [dataImgs, setDataImg] = useState([]);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
+    setLoading(true);
     (async () => {
       try {
         const response = await axiosInstance.get("gallery");
         setDataImg(response.data.gallery);
       } catch (error) {
         console.error(error);
+      } finally {
+        setLoading(false);
       }
     })();
   }, []);
   return (
     <>
-      {dataImgs.length !== 0 ? (
+      {loading ? (
+        <div className="h-[42.3125rem] w-full bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 rounded-t-lg bg-[length:200%_100%] animate-pulse"></div>
+      ) : dataImgs.length ? (
         <ImageSlider images={dataImgs} />
       ) : (
         <header
