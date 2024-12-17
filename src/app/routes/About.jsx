@@ -233,7 +233,7 @@ export const AboutRoute = () => {
           </h4>
           <div className="flex gap-5 w-full mt-5">
             <a href="https://www.facebook.com/share/14uCRzi8VF/"><FacebookIcon className="cursor-pointer" /></a>
-            <LinkedinIcon className="cursor-pointer" />
+            <a href="https://www.linkedin.com/in/elharamen-steel-460637341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><LinkedinIcon className="cursor-pointer" /></a>
             <TwitterIcon className="cursor-pointer" />
           </div>
         </div>
