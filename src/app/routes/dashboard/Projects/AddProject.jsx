@@ -89,7 +89,7 @@ export const AddDashboardProjectRoute = () => {
       setMediaData([]);
     } catch (error) {
       if (error.name === "CanceledError") {
-        console.log("Request canceled:", error.message);
+        // console.log("Request canceled:", error.message);
       } else {
         console.error("Error:", error);
       }

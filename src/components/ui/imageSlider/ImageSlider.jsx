@@ -17,7 +17,7 @@ export const ImageSlider = ({ images }) => {
     const interval = setInterval(nextSlide, 10000); // 10000ms = 10 seconds
     return () => clearInterval(interval); // Clean up interval on component unmount
   }, []);
-  console.log(images);
+  // console.log(images);
   return (
     <div
       className="relative w-full mx-auto overflow-hidden h-[42.3125rem] "

@@ -65,7 +65,7 @@ export const UploadForm = ({
   };
   const handleDelete = (index) => {
     setMediaData((prevFiles) => prevFiles.filter((_, i) => i !== index));
-    console.log(mediaData, index);
+    // console.log(mediaData, index);
     const img = mediaData[index];
     const type = img.type;
     const publicId = img.data.public_id;
@@ -143,7 +143,7 @@ export const UploadForm = ({
           { type: "video", data: video },
         ]);
       });
-      console.log(mediaData);
+      // console.log(mediaData);
     } catch (err) {
       setMediaData((prevList) => prevList.filter((item) => item !== "temp"));
       setError("Upload failed. Please try again.");

@@ -40,7 +40,7 @@ export const DashboardContactRoute = () => {
     })();
   }, []);
   const handleRowSelect = (selected) => {
-    console.log(selectedRows);
+    // console.log(selectedRows);
     setSelectedRows(selected);
   };
   return (

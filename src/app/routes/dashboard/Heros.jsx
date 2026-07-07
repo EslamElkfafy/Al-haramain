@@ -43,7 +43,7 @@ export const DashboardHerosRoute = () => {
 
     const newItem = { externalId: generateId(), ...data };
     setFinalData((prev) => [...prev, newItem]);
-    console.log("Item added:", newItem);
+    // console.log("Item added:", newItem);
     return newItem;
   }
   async function deleteItem(id, publicId) {
@@ -59,7 +59,7 @@ export const DashboardHerosRoute = () => {
             public_id: publicId,
           },
         });
-        console.log("Image deleted:", publicId);
+        // console.log("Image deleted:", publicId);
       } catch (error) {
         console.error(error);
       }
@@ -195,7 +195,7 @@ export const DashboardHerosRoute = () => {
 
       // Step 3: Update state and send patch request in one go
       setFinalData(updatedFinalData);
-      console.log("Updated final data:", updatedFinalData);
+      // console.log("Updated final data:", updatedFinalData);
 
       // Step 4: Perform patch request after updating state
       const patchResponse = await axiosInstance.patch(
@@ -209,7 +209,7 @@ export const DashboardHerosRoute = () => {
         }
       );
 
-      console.log("Patch response:", patchResponse);
+      // console.log("Patch response:", patchResponse);
       router(0);
     } catch (error) {
       console.error("Error during image upload process:", error);
